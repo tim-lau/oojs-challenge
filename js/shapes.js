@@ -22,13 +22,13 @@ function Circle(left, top, width, height, stylesMap) {
     };
 }
 
-//code to set Rectangle.prototype
+//code to set Circle.prototype
 Circle.prototype = new Shape();
 
 //register new shape with the system
 registerClassicalShape('Circle', Circle);
 
-function message(left, top, width, height, stylesMap) {
+function Message(left, top, width, height, stylesMap) {
     Shape.call(this, left, top, width, height, stylesMap);
 
     this.renderShape = function (canvasCtx) {
@@ -40,9 +40,9 @@ function message(left, top, width, height, stylesMap) {
     }
 }
 
-//code to set Rectangle.prototype
-message.prototype = new Shape();
+//code to set message.prototype
+Message.prototype = new Shape();
 
 //register new shape with the system
-registerClassicalShape('jQuery is so', message);
+registerClassicalShape('jQuery is so', Message);
 
